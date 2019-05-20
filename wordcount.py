@@ -2,42 +2,42 @@ import sys
 import os
 import time
 
-def remove_special(palabra):
-	caracteres = ["\xe2\x80\x9d","\xe2\x80\x9c","?","(",")","!",".",",","\r","\n",";","*","_"]
-	for caracter  in caracteres:
-		palabra = palabra.replace(caracter,"")
+def remove_special(word):
+	characters = ["\xe2\x80\x9d","\xe2\x80\x9c","?","(",")","!",".",",","\r","\n",";","*","_"]
+	for character in characters:
+		word = word.replace(character,"")
 
-	return palabra.lower()
+	return word.lower()
 
 
 start_time = time.time()
 try:
-	archivo = sys.argv[1]
+	filename = sys.argv[1]
 except Exception:
 	exit("No file args")
 
-if not os.path.isfile(archivo):
-	print("archivo no existe")
+if not os.path.isfile(bigfile):
+	print("file not exist")
 else:
-	archivo = open(archivo)
-	print("leyendo archivo...")
+	bigfile = open(filename)
+	print("reading file...")
 end_time = time.time()
 load_time = end_time - start_time
 
-pal_dict = {}
+dic_word = {}
 
 start_time = time.time()
-for linea in archivo:
-	linea = linea.replace("--"," ")
-	palabras = linea.split(" ")
-	for palabra in palabras:
-		palabra = remove_special(palabra)
-		pal_dict[palabra] = pal_dict.get(palabra,0)+1
+for line in bigfile:
+	line = line.replace("--"," ")
+	words = line.split(" ")
+	for word in words:
+		word = remove_special(word)
+		dic_word[word] = dic_word.get(word,0)+1
 
 end_time = time.time()
 running_time = end_time - start_time
 
-print("Palabras: ",pal_dict)
-print("Cantidad de palabras unicas:",len(pal_dict))
-print("Tiempo de carga: ",load_time)
-print("Tiempo de Ejecucion: ",running_time)
+print("Dic Words: ",pal_dict)
+print("Length of unique Words:",len(pal_dict))
+print("Loading Time: ",load_time)
+print("Running Time: ",running_time)
