@@ -22,10 +22,14 @@ For running script, from terminal write: "python wordcount.py pride.txt". Expect
 
 hdfs dfs -mkir <folderpath>
 
+hdfs dfs -mkir /user/cloudera/input_files/
+
   
 --copy file into hdsf
 
 hdfs dfs -put <filesystempath> <hdfs path>
+
+hdfs dfs -put /home/cloudera/pride.txt /user/cloudera/input_files/
   
 -- run jar
-hadoop jar /home/cloudera/wordcount.jar WordCount /user/cloudera/input/novel.txt /output_new
+hadoop jar /home/cloudera/wordcount.jar WordCount /user/cloudera/input/pride.txt /output_new
