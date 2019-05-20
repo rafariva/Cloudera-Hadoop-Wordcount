@@ -15,3 +15,17 @@ For comparsion reason, create a [python file](wordcount.py) for wordcount.
 For running script, from terminal write: "python wordcount.py pride.txt". Expected result: 127765 words (6961 unique words), time arround half second (may vary)
 
 ## Hadoop WordCount ##
+[video tutorial](https://www.youtube.com/watch?v=kF-63_2e1Kk)
+
+
+--create folders on hdfs
+
+hdfs dfs -mkir <folderpath>
+
+  
+--copy file into hdsf
+
+hdfs dfs -put <filesystempath> <hdfs path>
+  
+-- run jar
+hadoop jar /home/cloudera/wordcount.jar WordCount /user/cloudera/input/novel.txt /output_new
