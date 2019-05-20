@@ -25,6 +25,7 @@ end_time = time.time()
 load_time = end_time - start_time
 
 dic_word = {}
+count = 0
 
 start_time = time.time()
 for line in bigfile:
@@ -33,11 +34,13 @@ for line in bigfile:
 	for word in words:
 		word = remove_special(word)
 		dic_word[word] = dic_word.get(word,0)+1
+		count += 1
 
 end_time = time.time()
 running_time = end_time - start_time
 
 print("Dic Words: ",pal_dict)
-print("Length of unique Words:",len(pal_dict))
+print("Total Words:",count)
+print("Total Unique Words:",len(pal_dict))
 print("Loading Time: ",load_time)
 print("Running Time: ",running_time)
