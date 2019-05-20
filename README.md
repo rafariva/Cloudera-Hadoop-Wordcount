@@ -32,4 +32,4 @@ hdfs dfs -put <filesystempath> <hdfs path>
 hdfs dfs -put /home/cloudera/pride.txt /user/cloudera/input_files/
   
 -- run jar
-hadoop jar /home/cloudera/wordcount.jar WordCount /user/cloudera/input/pride.txt /output_new
+hadoop jar /home/cloudera/wordcount.jar WordCount /user/cloudera/input/pride.txt /user/cloudera/output_new
