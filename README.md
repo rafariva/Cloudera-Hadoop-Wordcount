@@ -10,7 +10,7 @@
 Use virtual machine now on...
 
 ## python script ##
-For comparsion reason, create a [python file](wordcount.py) for wordcount
-For running script, from termine write: "python wordcount.py pride.txt". Expected result: 6961 words, time arround half second (may vary)
+For comparsion reason, create a [python file](wordcount.py) for wordcount.
+For running script, from termine write: "python wordcount.py pride.txt". Expected result: 127765 words (6961 unique words), time arround half second (may vary)
 
 ## Hadoop WordCount ##
