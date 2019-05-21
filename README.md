@@ -1,7 +1,7 @@
 # Cloudera Hadoop Wordcount
 
 ## First Steps ##
-1. [Download](https://www.cloudera.com/downloads/quickstart_vms.html) from Cloudera, the Hadoop Virtual Machine (select platform VirtualBox)
+1. [Download](https://www.cloudera.com/downloads/quickstart_vms.html) the Cloudera Quickstart VM, the Hadoop Virtual Machine (select platform VirtualBox)
 2. [Download](https://www.virtualbox.org/wiki/Downloads) and install Oracle VM VirtualBox  
 2.a) create a New VM machine, and select the virtualdisk downloaded from Cloudera (from Step 1)  
 2.b) In case of error running VM Machine, maybe the CPU virtual has to be enabled. [See this tutorial](https://helpdeskgeek.com/how-to/enable-virtualization-in-the-bios/)  
@@ -45,7 +45,10 @@ For creating the WordCount.jar follow any of this tutorials (use [this code](Wor
 
 Then execute the following command  
 ```
-hadoop jar <jarFilePath.jar> WordCount <hdfsWordsFile.txt> <outputFolder>
+hadoop jar <jarFilePath.jar> WordCount <hdfsWordsFile.txt> <outputFolderPath>
 ```
 
 Also you can use the .jar file provided in hadoop example folder
+```
+hadoop jar /home/hadoop/hadoop/hadoop-0.19.2-examples.jar wordcount <hdfsWordsFile.txt> <outputFolderPath>
+```
