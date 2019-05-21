@@ -39,7 +39,7 @@ python hdfs_copy.py <localFile> <hdfsPath>
 ```
   
 #### run CountWord jar ####
-For create a jar countword follow any of this tutorials, using [this code](countWord.jar):  
+For create a jar countword follow any of this tutorials, using [this code](WordCount.java):  
 [video tutorial](https://www.youtube.com/watch?v=kF-63_2e1Kk)  
 [manual tutorial](https://eshajanani.wordpress.com/2016/02/09/word-count-example-on-cloudera-eclipse/)
 
