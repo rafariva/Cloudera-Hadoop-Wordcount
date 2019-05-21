@@ -30,6 +30,8 @@ hdfs dfs -mkir /user/cloudera/input_files/
 hdfs dfs -put <filesystempath> <hdfs path>
 
 hdfs dfs -put /home/cloudera/pride.txt /user/cloudera/input_files/
+
+or can use the [python script](hdfs_copy.py) for easy copy
   
 -- run jar
 hadoop jar /home/cloudera/wordcount.jar WordCount /user/cloudera/input/pride.txt /user/cloudera/output_new
