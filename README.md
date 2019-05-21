@@ -10,17 +10,19 @@
 
 Use in virtual machine from now on...
 
-## python script ##
+## VirtualMachine ##
+
+### python script ###
 For comparsion reason, create a [python file](wordcount.py) for wordcount.
 
 For running script, from terminal write: "python wordcount.py pride.txt". Expected result: 127765 words (6961 unique words), time arround half second (may vary)
 
-## Hadoop WordCount ##
+### Hadoop WordCount ###
 [video tutorial](https://www.youtube.com/watch?v=kF-63_2e1Kk)
 [manual tutorial](https://eshajanani.wordpress.com/2016/02/09/word-count-example-on-cloudera-eclipse/)
 
 
---Basic Commands
+#### Basic Commands ####
 ```
 hdfs dfs -ls /
 hdfs dfs -mkdir <folderName>
@@ -29,13 +31,14 @@ hdfs dfs -rmdir <folderName>
 hdfs dfs -put <localFile> <hdfs path>
 ```
 
--- For easy copy local file into hdfs
+#### For easy copy local file into hdfs ####
 
 Use the [python script](hdfs_copy.py) typing: 
 ```
 python hdfs_copy.py <localFile> <hdfsPath>
 ```
   
--- run jar
-hadoop jar /home/cloudera/wordcount.jar WordCount /user/cloudera/input/pride.txt /user/cloudera/output_new
-
+#### run CountWord jar ####
+```
+hadoop jar <jarFile.jar> WordCount <hdfsWordsFile.txt> <outputFolder>
+```
