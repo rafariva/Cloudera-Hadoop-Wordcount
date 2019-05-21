@@ -5,7 +5,7 @@
 2. [Download](https://www.virtualbox.org/wiki/Downloads) and install Oracle VM VirtualBox  
 2.a) create a New VM machine, and select the virtualdisk downloaded from Cloudera (from Step 1)  
 2.b) In case of error running VM Machine, maybe the CPU virtual has to be enabled. [See this tutorial](https://helpdeskgeek.com/how-to/enable-virtualization-in-the-bios/)  
-3. Download a long test file with a lot of words (i.e. Plain Text Ebook ["Pride and Prejudice" by Jane Auseten](http://www.gutenberg.org/ebooks/1342)) or use the [same file](pride.txt) provided in this repository.
+3. Download a long test file with a lot of words (i.e. Plain Text Ebook ["Pride and Prejudice" by Jane Auseten](http://www.gutenberg.org/ebooks/1342)) or use the [same file](pride.txt) provided in this repository (for better result duplicate this file content until having at least 700MB).
 
 
 Use in virtual machine from now on...
@@ -39,13 +39,13 @@ python hdfs_copy.py <localFile> <hdfsPath>
 ```
   
 #### run CountWord jar ####
-For create a jar countword follow any of this tutorials, using [this code](WordCount.java):  
+For creating the WordCount.jar follow any of this tutorials (use [this code](WordCount.java)):  
 [video tutorial](https://www.youtube.com/watch?v=kF-63_2e1Kk)  
 [manual tutorial](https://eshajanani.wordpress.com/2016/02/09/word-count-example-on-cloudera-eclipse/)
-
-
 
 Then execute the following command  
 ```
 hadoop jar <jarFilePath.jar> WordCount <hdfsWordsFile.txt> <outputFolder>
 ```
+
+Also you can use the .jar file provided in hadoop example folder
