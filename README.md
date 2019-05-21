@@ -34,9 +34,9 @@ hdfs dfs -rmdir <folderName>
 hdfs dfs -put <localFile> <hdfs path>
 ```
 
-#### For easy copy local file into hdfs ####
+#### Copy local file into hdfs ####
 
-Use the [python script](hdfs_copy.py) typing: 
+For easy copy, use the [python script](hdfs_copy.py) 
 ```
 python hdfs_copy.py <localFile> <hdfsPath>
 ```
