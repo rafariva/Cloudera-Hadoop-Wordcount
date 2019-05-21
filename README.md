@@ -14,7 +14,11 @@ Use in virtual machine from now on...
 
 ### python script ###
 For comparsion reason, create a [python file](wordcount.py) for wordcount.  
-For running script, from terminal write: "python wordcount.py pride.txt". Expected result: 127765 words (6961 unique words), time arround half second (may vary).  
+For running script, from terminal write: 
+```
+python wordcount.py pride.txt
+```
+Expected result: 127765 words (6961 unique words), time arround half second (may vary).  
 
 ### Hadoop WordCount ###
 [video tutorial](https://www.youtube.com/watch?v=kF-63_2e1Kk)  
