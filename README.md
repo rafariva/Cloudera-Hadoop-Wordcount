@@ -21,9 +21,6 @@ python wordcount.py pride.txt
 Expected result: 127765 words (6961 unique words), time arround half second (may vary).  
 
 ### Hadoop WordCount ###
-[video tutorial](https://www.youtube.com/watch?v=kF-63_2e1Kk)  
-[manual tutorial](https://eshajanani.wordpress.com/2016/02/09/word-count-example-on-cloudera-eclipse/)
-
 
 #### Basic Commands ####
 ```
@@ -42,6 +39,13 @@ python hdfs_copy.py <localFile> <hdfsPath>
 ```
   
 #### run CountWord jar ####
+For create a jar countword follow any of this tutorials, using [this code](countWord.jar):  
+[video tutorial](https://www.youtube.com/watch?v=kF-63_2e1Kk)  
+[manual tutorial](https://eshajanani.wordpress.com/2016/02/09/word-count-example-on-cloudera-eclipse/)
+
+
+
+Then execute the following command  
 ```
-hadoop jar <jarFile.jar> WordCount <hdfsWordsFile.txt> <outputFolder>
+hadoop jar <jarFilePath.jar> WordCount <hdfsWordsFile.txt> <outputFolder>
 ```
