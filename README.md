@@ -7,7 +7,8 @@
 2.b) In case of error running VM Machine, maybe the CPU virtual has to be enabled. [See this tutorial](https://helpdeskgeek.com/how-to/enable-virtualization-in-the-bios/)
 3. Download a long test file with a lot of words (i.e. Plain Text Ebook ["Pride and Prejudice" by Jane Auseten](http://www.gutenberg.org/ebooks/1342)) or use the [same file](pride.txt) provided in this repository.
 
-Use virtual machine now on...
+
+Use in virtual machine from now on...
 
 ## python script ##
 For comparsion reason, create a [python file](wordcount.py) for wordcount.
@@ -16,22 +17,25 @@ For running script, from terminal write: "python wordcount.py pride.txt". Expect
 
 ## Hadoop WordCount ##
 [video tutorial](https://www.youtube.com/watch?v=kF-63_2e1Kk)
+[manual tutorial](https://eshajanani.wordpress.com/2016/02/09/word-count-example-on-cloudera-eclipse/)
 
 
---create folders on hdfs
+--Basic Commands
+```
+hdfs dfs -ls /
+hdfs dfs -mkdir <folderName>
+hdfs dfs -rm <filepath>
+hdfs dfs -rmdir <folderName>
+hdfs dfs -put <localFile> <hdfs path>
+```
 
-hdfs dfs -mkir <folderpath>
+-- For easy copy local file into hdfs
 
-hdfs dfs -mkir /user/cloudera/input_files/
-
-  
---copy file into hdsf
-
-hdfs dfs -put <filesystempath> <hdfs path>
-
-hdfs dfs -put /home/cloudera/pride.txt /user/cloudera/input_files/
-
-or can use the [python script](hdfs_copy.py) for easy copy
+Use the [python script](hdfs_copy.py) typing: 
+```
+python hdfs_copy.py <localFile> <hdfsPath>
+```
   
 -- run jar
 hadoop jar /home/cloudera/wordcount.jar WordCount /user/cloudera/input/pride.txt /user/cloudera/output_new
+
